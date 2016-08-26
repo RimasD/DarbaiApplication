@@ -7,6 +7,27 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <ListBox x:Name="listDarbai" HorizontalAlignment="Left" Height="179" Margin="10,46,0,0" VerticalAlignment="Top" Width="252" SelectionChanged="listDarbai_SelectionChanged" MouseDoubleClick="listDarbai_MouseDoubleClick"/>
+        <Label x:Name="labelAtlikti" Content="" HorizontalAlignment="Left" Height="26" Margin="53,278,0,0" VerticalAlignment="Top" Width="58" RenderTransformOrigin="0.259,1.308"/>
+        <TextBox x:Name="textDarbai" HorizontalAlignment="Left" Height="29" Margin="325,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="101"/>
+        <Label x:Name="label" Content="Darbų pavadinimas" HorizontalAlignment="Left" Height="28" Margin="321,68,0,0" VerticalAlignment="Top" Width="137"/>
+        <Button x:Name="button" Content="Darbas" HorizontalAlignment="Left" Height="41" Margin="322,211,0,0" VerticalAlignment="Top" Width="122" RenderTransformOrigin="0.5,1.49" IsCancel="True" Click="button_Click"/>
+        <TextBox x:Name="textAtlikimas" HorizontalAlignment="Left" Height="25" Margin="359,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="39"/>
+        <Label x:Name="label1" Content="Atlikimas" HorizontalAlignment="Left" Margin="351,139,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.492,-0.376"/>
+        <Label x:Name="label2" Content="Atlikta" HorizontalAlignment="Left" Margin="51,250,0,0" VerticalAlignment="Top" Width="85"/>
+        <Label x:Name="labelNe" Content="" HorizontalAlignment="Left" Height="28" Margin="166,277,0,0" VerticalAlignment="Top" Width="53" RenderTransformOrigin="-0.358,0.464"/>
+        <Label x:Name="label3" Content="Neatlikta" HorizontalAlignment="Left" Height="28" Margin="159,251,0,0" VerticalAlignment="Top" Width="78"/>
+        <TextBox x:Name="textEdit" HorizontalAlignment="Left" Height="25" Margin="326,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.052"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Label x:Name="label4" Content="Įrašo eilutė" HorizontalAlignment="Left" Height="23" Margin="322,12,0,0" VerticalAlignment="Top" Width="92"/>
+
     </Grid>
 </Window>

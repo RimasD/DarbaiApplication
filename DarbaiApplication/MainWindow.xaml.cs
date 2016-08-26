@@ -20,9 +20,83 @@ namespace DarbaiApplication
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<DarbuAtlikimas> atlikimas;
+        int k;
+        int kk;
+        int sk = 0;
+
         public MainWindow()
         {
+
             InitializeComponent();
+            atlikimas = new List<DarbuAtlikimas>();
+
+            updateList();
+        }
+
+        void updateList()
+        {
+            listDarbai.Items.Clear();
+            foreach (DarbuAtlikimas a in atlikimas)
+            {
+                listDarbai.Items.Add(a.sk + "  -  " + a.darb + "  :    " + a.atl);
+            }
+
+
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+
+            string darb;
+            string atl;
+
+            darb = Convert.ToString(textDarbai.Text);
+            atl = Convert.ToString(textAtlikimas.Text);
+            sk++;
+            atlikimas.Add(new DarbuAtlikimas(sk, darb, atl));
+
+            foreach (DarbuAtlikimas a in atlikimas)
+            {
+
+
+                listDarbai.Items.Add(a.sk + "  -  " + a.darb + "   :    " + a.atl);
+
+            }
+            if (atl == "+")
+            {
+                k++;
+            }
+            if (atl == "-")
+            {
+                kk++;
+            }
+
+
+            labelNe.Content = kk;
+            labelAtlikti.Content = k;
+          updateList();
+          
+        }
+
+        private void listDarbai_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void listDarbai_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+
+            textEdit.Text = Convert.ToString(listDarbai.SelectedIndex);
+            int nr = listDarbai.SelectedIndex;
+            atlikimas[nr].atl = " + ";
+           
+        
+            labelNe.Content = kk-1;
+           
+            updateList();JournalEntry
+           
+
         }
     }
 }
