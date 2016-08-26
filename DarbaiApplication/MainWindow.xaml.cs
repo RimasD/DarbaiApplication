@@ -94,7 +94,7 @@ namespace DarbaiApplication
         
             labelNe.Content = kk-1;
            
-            updateList();JournalEntry
+            updateList();
            
 
         }
